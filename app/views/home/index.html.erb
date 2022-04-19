@@ -1,2 +1,12 @@
-<h1>Home</h1>
-<p>This is my pratice file for Ruby on Rails.</p>
+<div style="height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <h1>The Best Friends App</h1>
+  <p>List all your friends in one place!</p>
+  <% if user_signed_in? %>
+  <%= link_to 'See Friends List', friends_path, class:"btn btn-dark" %>
+  <% else %>
+  <div>
+    <%= link_to 'Create an account', new_user_registration_path, class:"btn btn-dark" %> |
+    <%= link_to 'Log in', new_user_session_path, class:"btn btn-dark" %>
+  </div>
+  <% end %>
+</div>
